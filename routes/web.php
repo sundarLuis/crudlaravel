@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('auth.login');
 });
 Route::resource('empleados', 'EmpleadosController')->middleware('auth');
-Auth::routes(['register'=>false,'reset'=>false]);
+Auth::routes();
 Route::get('/home', 'EmpleadosController@index')->name('home');
